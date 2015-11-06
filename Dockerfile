@@ -17,7 +17,7 @@ RUN apt-get update && \
 
   # cleanup
   apt-get remove -y wget unzip libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential && \
-  apt-get install -y zlib1g openssl ca-certificates libpcre3 libpq-dev perl-modules && \
+  apt-get install -y zlib1g openssl ca-certificates libpcre3 libpq perl-modules && \
   apt-get autoremove -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
