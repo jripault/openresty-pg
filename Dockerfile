@@ -8,10 +8,11 @@ WORKDIR /app
 ADD install_openresty.sh /install_openresty.sh
 ADD install_lapis.sh /install_lapis.sh
 
+
+
 RUN apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y wget unzip libreadline-dev libncurses5-dev libpcre3-dev libssl-dev libpq-dev perl make build-essential && \
-
+  apt-get install -y wget unzip libreadline-dev libncurses5-dev libpcre3-dev libssl-dev libpq-dev perl libexpat-dev make build-essential && \
   bash /install_openresty.sh && \
   bash /install_lapis.sh && \
 
