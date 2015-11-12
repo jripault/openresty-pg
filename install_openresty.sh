@@ -1,7 +1,7 @@
 wget http://openresty.org/download/ngx_openresty-${NGINX_VERSION}.tar.gz && \
   tar xzvf ngx_openresty-${NGINX_VERSION}.tar.gz && \
   cd ngx_openresty-${NGINX_VERSION}/ && \
-  ./configure --with-http_postgres_module && \
+  ./configure --with-http_postgres_module --with-http_dav_module && \
   make && \
   make install && \
   cd .. && \
